@@ -2,7 +2,7 @@
 
 This application is intended to be used in conjunction with the one from https://github.com/sgarciatz/qos-testing-server/tree/main, which is its "backend".
 
-When this app is executed it makes requests to the endpoints of the server side. The requests and responses are used to measure QoS metrics such as latency and jitter. An SQLite3 instance is created in the database folder to guarantee its persistence.
+When this app is executed it makes requests to the endpoints of the server side. The requests and responses are used to measure QoS metrics, such as latency and jitter. An SQLite3 instance is created in the database folder to guarantee the persistence of the experiments' results.
 
 The app has two execution modes, one for carrying out experiments, and the other to only see the results of existing experiments in the database.
 
@@ -20,6 +20,8 @@ In order to parametrize the execution of the app JSON files are used. They have 
 }
 ```
 The payload is specified in Bytes in the `payload_size` field and `n_requests` specifies the the number of sequential requests that are to be made. The `method` attribute can be assigned the value `POST` or `GET`. In the current state of the application, `POST`-based experiments have the same outgoing (request) and ingoing (response) `payload_size`. On the other hand, `GET`-based experiments can have "no payload" (very little) or payload in incoming responses only.
+
+The code base is small and it is documented so it should be easy to modify if needed.
 
 ## Execution guide
 To set up the enviroment execute the following commands:
