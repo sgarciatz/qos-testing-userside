@@ -1,4 +1,4 @@
-# QoS Testing server
+# QoS Testing Userside Script
 
 This application is intended to be used in conjunction with the one from https://github.com/sgarciatz/qos-testing-server/tree/main, which is its "backend".
 
